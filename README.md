@@ -6,5 +6,5 @@
 ### Index
 ---
 - git
-    - [깃 TIL 링크](https://github.com/Cheolyong-Kim/TIL.git)
+    - [git basic 01](https://github.com/Cheolyong-Kim/TIL.git)
     
