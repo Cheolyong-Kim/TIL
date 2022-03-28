@@ -6,5 +6,5 @@
 ### Index
 ---
 - git
-    - [git basic 01](https://github.com/Cheolyong-Kim/TIL.git)
+    - [git basic 01](https://github.com/Cheolyong-Kim/TIL/blob/master/TIL_day1.md)
     
