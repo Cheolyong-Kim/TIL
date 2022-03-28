@@ -1,4 +1,4 @@
-# git 특강 1일차
+# Git Basic 01
 
 ---
 
@@ -148,7 +148,7 @@ for i in range(10):
 
 ##### 2-6) 이미지
 
-![타이포라 이미지](C:\Users\김철용\Desktop\철용\서비스 산업 데이터 활용 빅데이터\git 특강\타이포라 이미지.png)
+![타이포라 이미지](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbpsOIy%2FbtqD3IgWq5o%2Fc4WwDs2tvwuvbr1zWPLwB1%2Fimg.png)
 
 > ![이미지이름] (이미지 URL) 형식으로 입력하면 이미지가 출력된다. (공백없어야함. 설명을 위해 공백을 넣음)
 
@@ -164,7 +164,7 @@ for i in range(10):
 
 
 
-### 3. git 기초
+### 3. git
 
 ---
 
@@ -208,10 +208,29 @@ for i in range(10):
    - 각각 커밋은 SHA-1알고리즘에 의해 만들어진 고유 해시값을 ID로 가진다.
 6. git log
    - 커밋의 내역을 조회할 수 있는 명령어다.
+   - ``git log --oneline``으로 한 줄로 축약해서 볼 수 있다.
 
 
 
+##### 3-3) git 로컬 저장소와 원격 저장소 연결
+
+1. git remote
+   - 로컬 저장소에 원격 저장소를 등록, 조회, 삭제할 수 있는 명령어
+   - ``git remote add <이름> <주소>``형식으로 작성
+   - ``git remote -v``로 조회가 가능하다.
 
 
 
+##### 3-4) 원격 저장소에 업로드
 
+​		파일을 업로드하는게 아니라 커밋을 업로드하는 것
+
+​		따라서 먼저 로컬 저장소에서 커밋을 생성해야 원격 저장소에 업로드가 가능하다.
+
+1. git push
+
+   - 로컬 저장소의 커밋을 원격 저장소에 업로드하는 명령어
+
+   - ``git push <저장소 이름> <브랜치 이름>`` 형식으로 작성한다.
+
+     
