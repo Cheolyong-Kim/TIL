@@ -7,4 +7,5 @@
 ---
 - git
     - [git basic 01](https://github.com/Cheolyong-Kim/TIL/blob/master/TIL_day1.md)
+    - [git basic 02](https://github.com/Cheolyong-Kim/TIL/blob/master/TIL_day2.md)
     
