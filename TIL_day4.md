@@ -172,3 +172,213 @@ with open("data.json",'w') as f:
 
 ---
 
+### urlib로 웹페이지 추출하기(python)
+
+> 파이썬의 urlib.request 모듈을 사용하여 웹페이지를 추출해본다.
+
+
+
+```python
+from urllib.request import urlopen
+
+f=urlopen("http://www.hanbit.co.kr")
+print(f.read()) #HTTP 응답 본문(bytes 자료형)
+print(f.status) #HTTP 응답 코드
+print(f.getheader("Content-Type")) #HTTP 헤더
+```
+
+
+
+---
+
+### HTTP 헤더에서 인코딩 방식 추출하기(python)
+
+> HTTP 응답의 Content-Type 헤더를 참조하여 해당 페이지에 사용되고 있는 인코딩 방식을 알아낼 수 있다.
+
+
+
+```python
+import sys
+from urllib.request import urlopen
+
+f = urlopen('http://www.hanbit.co.kr/store/books/full_book_list.html')
+encoding = f.info().get_content_charset(failobj="utf-8") #HTTP 헤더를 기반으로 인코딩 방식을 추출, 명시돼있지 않을 경우 utf-8사용
+print('encoding:', encoding, file=sys.stderr) #인코딩 방식을 표준 오류에 출력
+text = f.read().decode(encoding) #추출한 인코딩 방식으로 디코딩
+print(text) #디코딩한 내용을 출력
+```
+
+
+
+---
+
+### meta 태그에서 인코딩 방식 추출하기
+
+> 일반적인 브라우저는 HTML내부의 meta태그 또는 응답 본문의 바이트열도 확인해서 최종적인 인코딩 방식을 결정하고 화면에 출력한다. HTTP헤더에서 추출하는 인코딩 정보가 항상 맞는 것은 아니기 때문에 meta태그를 통해 인코딩 방식을 추출하는 방법도 알아본다.
+
+
+
+```python
+import sys
+import re
+from urllib.request import urlopen
+
+f = urlopen('http://www.hanbit.co.kr/store/books/full_book_list.html')
+bytes_content = f.read()
+scanned_text = bytes_content[:1024].decode('ascii', errors='replace') #응답 본문 앞부분 1024바이트를 ascii문자로 디코딩
+
+match = re.search(r'charset=["\']?([\w-]+)', scanned_text) #디코딩한 문자열에서 정규 표현식으로 charset값을 추출
+
+if match:
+    encoding = match.group(1)
+else: #charset이 명시돼 있지 않으면 utf-8사용
+    encoding = 'utf-8'
+print('encoding:', encoding, file=sys.stderr) #추출한 인코딩을 표준 오류에 출력
+text = bytes_content.decode(encoding) #추출한 인코딩으로 다시 디코딩
+print(text) #디코딩한 내용을 출력
+```
+
+
+
+---
+
+### CSV
+
+> CSV는 하나의 레코드를 한 줄에 나타내고, 각 줄의 값을 쉼표로 구분하는 텍스트 형식이다.
+>
+> 행과 열로 구성되는 2차원 데이터를 저장할 때 사용한다.
+
+
+
+1. csv모듈을 사용해 CSV 형식으로 저장하기
+
+```python
+
+
+import csv
+
+with open("data.csv",'w',newline='') as f:
+    wd=csv.writer(f)
+    wd.writerow(["data1","data2","data2"]) #단순히 문자열로 써짐. 키 값이 아님
+    wd.writerows([[10,20],[10,20],[10,20],[10,20],[10,20]]) #데이터가 이미 1차원보다 크면 writerows를 쓰지만 1차원이라면 writerow를 반복문으로 사용해도 됨.
+```
+
+```python
+#딕셔너리로 구성된 리스트를 CSV 형식으로 저장하기
+
+import csv
+
+with open("data.csv",'w',newline='') as f:
+    wd = csv.DictWriter(f,["key1","key2","key3"]) #파일에 입력하는게 아니라 키 값을 설정하는 것
+    wd.writeheader() #키 값이 헤더로 설정되고 파일 첫 줄에 입력됨.
+    wd.writerow({"key1":10,"key2":20,"key3":30})
+    wd.writerows(({"key1":10,"key2":20,"key3":30},
+                 {"key1":10,"key2":20,"key3":30},
+                 {"key1":10,"key2":20,"key3":30},
+                 {"key1":10,"key2":20,"key3":30}))
+    # 헤더로 설정한 키 중에 없는 키에 값을 넣으려고 하면 에러 발생. 딕셔너리처럼 키 값을 생성해서 값을 넣지 않음
+```
+
+
+
+---
+
+### 데이터베이스(SQLite3)에 저장하기
+
+> SQLite3는 파일 기반의 간단한 관계형 데이터베이스이다. SQL구문을 사용해 데이터를 읽고 쓸 수 있다.
+
+
+
+```python
+import sqlite3
+
+conn = sqlite3.connect("data.db")
+c=conn.cursor()
+c.execute('DROP TABLE IF EXISTS cities') #cities 테이블이 이미 존재한다면 제거
+c.execute('''
+    CREATE TABLE cities (
+        rank integer,
+        city text,
+        population integer
+    )
+''') #테이블 생성
+#데이터 저장↓
+c.execute('INSERT INTO cities VALUES (?, ?, ?)', (1, '상하이', 24150000))
+c.execute('INSERT INTO cities VALUES (:rank, :city, :population)',
+          {'rank': 2, 'city': '카라치', 'population': 23500000})
+c.executemany('INSERT INTO cities VALUES (:rank, :city, :population)', [
+    {'rank': 3, 'city': '베이징', 'population': 21516000},
+    {'rank': 4, 'city': '텐진', 'population': 14722100},
+    {'rank': 5, 'city': '이스탄불', 'population': 14160467},
+])
+c.executemany('INSERT INTO cities VALUES (?, ?, ?)', [(1, '상하이', 24150000),(1, '상하이', 24150000),(1, '상하이', 24150000),(1, '상하이', 24150000)])
+conn.commit()
+
+#데이터 출력↓
+c.execute('SELECT * FROM cities') #저장한 데이터를 추출
+for i in c.fetchall(): #쿼리의 결과를 fetchall메소드로 추출
+    print(i)
+    
+conn.close()
+```
+
+
+
+---
+
+### 파이썬으로 스크레이핑하는 흐름
+
+> 스크레이핑하는 흐름은 추출->정규화->저장으로 흘러간다. 앞서 배웠던 내용들로 프로그램을 구성해본다.
+
+
+
+```python
+from urllib.request import urlopen
+import re
+from html import unescape
+import sqlite3
+
+def fetch(url):
+    f = urlopen(url)
+    encoding = f.info().get_content_charset(failobj="utf-8") #HTTP헤더로 인코딩 방식 추출
+    html = f.read().decode(encoding) #추출한 인코딩 방식으로 디코딩
+    return html #디코딩한 결과를 반환
+
+def scrape(html):
+    data=[]
+    for i in re.findall(r'<td class="left"><a.*?</td>', html, re.DOTALL):
+        url = re.search(r'<a href="(.*?)">',i).group(1) #도서의 URL을 추출
+        url="http://www.hanbit.co.kr"+url
+        title = re.sub(r'<.*?>', '',i) #태그를 제거해 도서의 제목 추출
+        title = unescape(title)
+        data.append({'url':url,"title":title})
+    return data
+
+def save(db,data):
+    conn = sqlite3.connect(db)
+    c=conn.cursor()
+    c.execute('DROP TABLE IF EXISTS data') #data 테이블이 존재하면 제거
+    c.execute('''
+            CREATE TABLE data (
+                title text,
+                url text
+            )
+        ''') #테이블 생성
+    c.executemany('INSERT INTO data VALUES (:title, :url)', data) #데이터 저장
+    conn.commit()
+    conn.close()
+
+def print_db(db): #도서들과 주소를 출력
+    conn = sqlite3.connect(db)
+    c = conn.cursor()
+    c.execute('SELECT * FROM data')
+    for i in c.fetchall():
+        print(i)
+
+if __name__=="__main__":
+    html=fetch("http://www.hanbit.co.kr/store/books/full_book_list.html")
+    books=scrape(html)
+    save('books.db', books)
+    print_db('books.db')
+```
+
