@@ -17,3 +17,4 @@
     - [Web Crawling & Scraping basic 02](https://github.com/Cheolyong-Kim/TIL/blob/master/TIL_day5.md)
     - [Web Crawling & Scraping basic 03](https://github.com/Cheolyong-Kim/TIL/blob/master/TIL_day6.md)
     - [Web Crawling & Scraping basic 04](https://github.com/Cheolyong-Kim/TIL/blob/master/TIL_day7.md)
+    - [Web Crawling & Scraping basic 05](https://github.com/Cheolyong-Kim/TIL/blob/master/TIL_day8.md)
