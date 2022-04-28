@@ -39,3 +39,4 @@
     - [머신러닝 딥러닝 05](https://github.com/Cheolyong-Kim/TIL/blob/master/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D%20%EB%94%A5%EB%9F%AC%EB%8B%9D%20%EA%B8%B0%EC%B4%88%2005.md)
     - [머신러닝 딥러닝 06](https://github.com/Cheolyong-Kim/TIL/blob/master/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D%20%EB%94%A5%EB%9F%AC%EB%8B%9D%20%EA%B8%B0%EC%B4%88%2006.md)
     - [머신러닝 딥러닝 07](https://github.com/Cheolyong-Kim/TIL/blob/master/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D%20%EB%94%A5%EB%9F%AC%EB%8B%9D%20%EA%B8%B0%EC%B4%88%2007.md)
+    - [머신러닝 딥러닝 08](https://github.com/Cheolyong-Kim/TIL/blob/master/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D%20%EB%94%A5%EB%9F%AC%EB%8B%9D%20%EA%B8%B0%EC%B4%88%2008.md)
