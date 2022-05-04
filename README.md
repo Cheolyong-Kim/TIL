@@ -43,3 +43,8 @@
     - [머신러닝 딥러닝 09](https://github.com/Cheolyong-Kim/TIL/blob/master/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D%20%EB%94%A5%EB%9F%AC%EB%8B%9D%20%EA%B8%B0%EC%B4%88%2009.md)
     - [머신러닝 딥러닝 10](https://github.com/Cheolyong-Kim/TIL/blob/master/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D%20%EB%94%A5%EB%9F%AC%EB%8B%9D%20%EA%B8%B0%EC%B4%88%2010.md)
     
+    <br/>
+    
+- 통계기반 비정형 텍스트 분석
+
+    - [통계기반 비정형 텍스트 분석 01](https://github.com/Cheolyong-Kim/TIL/blob/master/%ED%86%B5%EA%B3%84%EA%B8%B0%EB%B0%98%20%EB%B9%84%EC%A0%95%ED%98%95%20%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EC%84%9D/%ED%86%B5%EA%B3%84%EA%B8%B0%EB%B0%98%20%EB%B9%84%EC%A0%95%ED%98%95%20%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EC%84%9D%2001.md)
