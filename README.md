@@ -6,9 +6,9 @@
 ### Index
 ---
 - git
-    - [git basic 01](https://github.com/Cheolyong-Kim/TIL/blob/master/git_basic01.md)
-    - [git basic 02](https://github.com/Cheolyong-Kim/TIL/blob/master/git_basic02.md)
-    - [git basic 03](https://github.com/Cheolyong-Kim/TIL/blob/master/git_basic03.md)  
+    - [git basic 01](https://github.com/Cheolyong-Kim/TIL/blob/master/git%20%EA%B8%B0%EC%B4%88/git_basic01.md)
+    - [git basic 02](https://github.com/Cheolyong-Kim/TIL/blob/master/git%20%EA%B8%B0%EC%B4%88/git_basic02.md)
+    - [git basic 03](https://github.com/Cheolyong-Kim/TIL/blob/master/git%20%EA%B8%B0%EC%B4%88/git_basic03.md)  
 
     <br/>
     
