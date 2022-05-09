@@ -48,3 +48,4 @@
 - 통계기반 비정형 텍스트 분석
 
     - [통계기반 비정형 텍스트 분석 01](https://github.com/Cheolyong-Kim/TIL/blob/master/%ED%86%B5%EA%B3%84%EA%B8%B0%EB%B0%98%20%EB%B9%84%EC%A0%95%ED%98%95%20%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EC%84%9D/%ED%86%B5%EA%B3%84%EA%B8%B0%EB%B0%98%20%EB%B9%84%EC%A0%95%ED%98%95%20%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EC%84%9D%2001.md)
+    - [통계기반 비정형 텍스트 분석 02](https://github.com/Cheolyong-Kim/TIL/blob/master/%ED%86%B5%EA%B3%84%EA%B8%B0%EB%B0%98%20%EB%B9%84%EC%A0%95%ED%98%95%20%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EC%84%9D/%ED%86%B5%EA%B3%84%EA%B8%B0%EB%B0%98%20%EB%B9%84%EC%A0%95%ED%98%95%20%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EC%84%9D%2002.md)
