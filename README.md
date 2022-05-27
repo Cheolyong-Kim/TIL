@@ -66,6 +66,7 @@
 - 딥러닝 기반 비정형 텍스트 분석
 
     - [딥러닝 간단한 복습 01](https://github.com/Cheolyong-Kim/TIL/blob/master/%EB%94%A5%EB%9F%AC%EB%8B%9D%EA%B8%B0%EB%B0%98%20%EB%B9%84%EC%A0%95%ED%98%95%20%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EC%84%9D/%EB%94%A5%EB%9F%AC%EB%8B%9D%20%EA%B0%84%EB%8B%A8%ED%95%9C%20%EB%B3%B5%EC%8A%B5.md)
+    - [딥러닝 간단한 복습 02](https://github.com/Cheolyong-Kim/TIL/blob/master/%EB%94%A5%EB%9F%AC%EB%8B%9D%EA%B8%B0%EB%B0%98%20%EB%B9%84%EC%A0%95%ED%98%95%20%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EC%84%9D/%EB%94%A5%EB%9F%AC%EB%8B%9D%20%EA%B0%84%EB%8B%A8%ED%95%9C%20%EB%B3%B5%EC%8A%B5%2002.md)
     
     <br>
     
