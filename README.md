@@ -71,6 +71,7 @@
     - [딥러닝 간단한 복습 02](https://github.com/Cheolyong-Kim/TIL/blob/master/%EB%94%A5%EB%9F%AC%EB%8B%9D%EA%B8%B0%EB%B0%98%20%EB%B9%84%EC%A0%95%ED%98%95%20%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EC%84%9D/%EB%94%A5%EB%9F%AC%EB%8B%9D%20%EA%B0%84%EB%8B%A8%ED%95%9C%20%EB%B3%B5%EC%8A%B5%2002.md)
     - [교사 강요(Teacher Forcing)](https://github.com/Cheolyong-Kim/TIL/blob/master/%EB%94%A5%EB%9F%AC%EB%8B%9D%EA%B8%B0%EB%B0%98%20%EB%B9%84%EC%A0%95%ED%98%95%20%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EC%84%9D/%EA%B5%90%EC%82%AC%20%EA%B0%95%EC%9A%94(Teacher%20Forcing).md)
     - [피드 포워드 신경망 언어 모델(Neural Network Language Model, NNLM)](https://github.com/Cheolyong-Kim/TIL/blob/master/%EB%94%A5%EB%9F%AC%EB%8B%9D%EA%B8%B0%EB%B0%98%20%EB%B9%84%EC%A0%95%ED%98%95%20%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EC%84%9D/%ED%94%BC%EB%93%9C%20%ED%8F%AC%EC%9B%8C%EB%93%9C%20%EC%8B%A0%EA%B2%BD%EB%A7%9D%20%EC%96%B8%EC%96%B4%20%EB%AA%A8%EB%8D%B8(Neural%20Network%20Language%20Model%2C%20NNLM).md)
+    - [워드 임베딩(Word Embedding)](https://github.com/Cheolyong-Kim/TIL/blob/master/%EB%94%A5%EB%9F%AC%EB%8B%9D%EA%B8%B0%EB%B0%98%20%EB%B9%84%EC%A0%95%ED%98%95%20%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EC%84%9D/%EC%9B%8C%EB%93%9C%20%EC%9E%84%EB%B2%A0%EB%94%A9.md)
     
     <br>
     
