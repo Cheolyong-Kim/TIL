@@ -82,4 +82,10 @@
     - [롤 인벤 msi 검색 결과 크롤링(아주 간단하게)](https://github.com/Cheolyong-Kim/TIL/blob/master/%EC%8B%A4%EC%8A%B5/%EB%A1%A4%20%EC%9D%B8%EB%B2%A4%20msi%20%EA%B2%80%EC%83%89%20%EA%B2%B0%EA%B3%BC%20%ED%81%AC%EB%A1%A4%EB%A7%81(%EC%95%84%EC%A3%BC%20%EA%B0%84%EB%8B%A8%ED%95%98%EA%B2%8C)/%EB%A1%A4%20%EC%9D%B8%EB%B2%A4%20msi%20%EA%B2%80%EC%83%89%20%EA%B2%B0%EA%B3%BC%20%ED%81%AC%EB%A1%A4%EB%A7%81(%EC%95%84%EC%A3%BC%20%EA%B0%84%EB%8B%A8%ED%95%98%EA%B2%8C).md)
     - [롤 메타에 따른 선수 활약 예측 01](https://github.com/Cheolyong-Kim/TIL/blob/master/%EC%8B%A4%EC%8A%B5/%EB%A1%A4%20%EB%A9%94%ED%83%80%EC%97%90%20%EB%94%B0%EB%A5%B8%20%EC%84%A0%EC%88%98%20%ED%99%9C%EC%95%BD%20%EC%98%88%EC%B8%A1/%EB%A1%A4%20%EB%A9%94%ED%83%80%EC%97%90%20%EB%94%B0%EB%A5%B8%20%EC%84%A0%EC%88%98%20%ED%99%9C%EC%95%BD%20%EC%98%88%EC%B8%A1%2001.md)
       - [롤 메타에 따른 선수 활약 예측 02](https://github.com/Cheolyong-Kim/TIL/blob/master/%EC%8B%A4%EC%8A%B5/%EB%A1%A4%20%EB%A9%94%ED%83%80%EC%97%90%20%EB%94%B0%EB%A5%B8%20%EC%84%A0%EC%88%98%20%ED%99%9C%EC%95%BD%20%EC%98%88%EC%B8%A1/%EB%A1%A4%20%EB%A9%94%ED%83%80%EC%97%90%20%EB%94%B0%EB%A5%B8%20%EC%84%A0%EC%88%98%20%ED%99%9C%EC%95%BD%20%EC%98%88%EC%B8%A1%2002.md)
+    
+    <br>
+    
+- 기타
+
+    - [불균형 데이터 처리](https://github.com/Cheolyong-Kim/TIL/blob/master/%EA%B8%B0%ED%83%80/%EB%B6%88%EA%B7%A0%ED%98%95%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%B2%98%EB%A6%AC.md)
 
