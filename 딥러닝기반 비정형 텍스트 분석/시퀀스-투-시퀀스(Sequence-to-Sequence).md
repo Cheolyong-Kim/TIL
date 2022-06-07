@@ -116,7 +116,7 @@ seq2seq에서 사용되는 모든 단어들은 임베딩 벡터로 변환 후 �
 
 <br>
 
-![fra 데이터](https://github.com/Cheolyong-Kim/TIL/blob/master/%EB%94%A5%EB%9F%AC%EB%8B%9D%EA%B8%B0%EB%B0%98%20%EB%B9%84%EC%A0%95%ED%98%95%20%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EC%84%9D/seq2seq%20image/fra 데이터.png?raw=true)
+![fra 데이터](https://github.com/Cheolyong-Kim/TIL/blob/master/%EB%94%A5%EB%9F%AC%EB%8B%9D%EA%B8%B0%EB%B0%98%20%EB%B9%84%EC%A0%95%ED%98%95%20%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EC%84%9D/seq2seq%20image/fra_data.png?raw=true)
 
 병렬 코퍼스는 이렇게 구성되어 있다.
 
