@@ -75,6 +75,7 @@
     - [시퀀스-투-시퀀스(Sequence-to-Sequence, seq2seq)](https://github.com/Cheolyong-Kim/TIL/blob/master/%EB%94%A5%EB%9F%AC%EB%8B%9D%EA%B8%B0%EB%B0%98%20%EB%B9%84%EC%A0%95%ED%98%95%20%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EC%84%9D/%EC%8B%9C%ED%80%80%EC%8A%A4-%ED%88%AC-%EC%8B%9C%ED%80%80%EC%8A%A4(Sequence-to-Sequence).md)
     - [어텐션 매커니즘(Attention Mechanism)](https://github.com/Cheolyong-Kim/TIL/blob/master/%EB%94%A5%EB%9F%AC%EB%8B%9D%EA%B8%B0%EB%B0%98%20%EB%B9%84%EC%A0%95%ED%98%95%20%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EC%84%9D/%EC%96%B4%ED%85%90%EC%85%98%20%EB%A7%A4%EC%BB%A4%EB%8B%88%EC%A6%98(Attention%20Mechanism).md)
     - [트랜스포머(Transformer)](https://github.com/Cheolyong-Kim/TIL/blob/master/%EB%94%A5%EB%9F%AC%EB%8B%9D%EA%B8%B0%EB%B0%98%20%EB%B9%84%EC%A0%95%ED%98%95%20%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EC%84%9D/%ED%8A%B8%EB%9E%9C%EC%8A%A4%ED%8F%AC%EB%A8%B8(Transformer).md)
+    - [버트(Bidirectional Encoder Representations from Transformers, BERT)](https://github.com/Cheolyong-Kim/TIL/blob/master/%EB%94%A5%EB%9F%AC%EB%8B%9D%EA%B8%B0%EB%B0%98%20%EB%B9%84%EC%A0%95%ED%98%95%20%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EC%84%9D/BERT(Bidirectional%20Encoder%20Representations%20from%20Transformers).md)
     
     <br>
     
