@@ -373,10 +373,68 @@ SBERT는 STS 데이터를 학습하기 위해 다음과 같은 구조를 가진�
 
 ---
 
+# BERT의 문장 임베딩(SBERT)을 이용한 한국어 챗봇
+
+<br>
+
+SBERT를 이용해 문장 임베딩을 얻을 수 있는 패키지인 sentence_transformers를 사용하여 쉽게 한국어 챗봇을 구현할 수 있다.
+
+``pip install sentence_transformers``명령어로 패키지를 설치해준다.
+
+<br>
+
+![j1](https://github.com/Cheolyong-Kim/TIL/blob/master/%EB%94%A5%EB%9F%AC%EB%8B%9D%EA%B8%B0%EB%B0%98%20%EB%B9%84%EC%A0%95%ED%98%95%20%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EC%84%9D/BERT%20image/j1.png?raw=true)
+
+필요한 패키지들을 불러온다.
+
+<br>
+
+![j2](https://github.com/Cheolyong-Kim/TIL/blob/master/%EB%94%A5%EB%9F%AC%EB%8B%9D%EA%B8%B0%EB%B0%98%20%EB%B9%84%EC%A0%95%ED%98%95%20%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EC%84%9D/BERT%20image/j2.png?raw=true)
+
+입력한 링크에서 챗봇 데이터를 가져온다.
+
+<br>
+
+![j3](https://github.com/Cheolyong-Kim/TIL/blob/master/%EB%94%A5%EB%9F%AC%EB%8B%9D%EA%B8%B0%EB%B0%98%20%EB%B9%84%EC%A0%95%ED%98%95%20%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EC%84%9D/BERT%20image/j3.png?raw=true)
+
+문장 임베딩을 얻기 위해 사전 훈련된 BERT를 로드한다.
+
+로드한 모델은 한국어를 포함해서 학습된 다국어 모델이다.
+
+모델에 대한 리스트는 [이 링크](https://huggingface.co/models?library=sentence-transformers)에서 확인 가능하다.
+
+<br>
+
+![j4](https://github.com/Cheolyong-Kim/TIL/blob/master/%EB%94%A5%EB%9F%AC%EB%8B%9D%EA%B8%B0%EB%B0%98%20%EB%B9%84%EC%A0%95%ED%98%95%20%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EC%84%9D/BERT%20image/j4.png?raw=true)
+
+가져온 데이터에서 모든 질문열에 대해 문장 임베딩 값을 구하고 새로운 embedding열에 저장한다.
+
+<br>
+
+![j5](https://github.com/Cheolyong-Kim/TIL/blob/master/%EB%94%A5%EB%9F%AC%EB%8B%9D%EA%B8%B0%EB%B0%98%20%EB%B9%84%EC%A0%95%ED%98%95%20%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EC%84%9D/BERT%20image/j5.png?raw=true)
+
+두 벡터의 코사인 유사도를 구하는 함수를 정의한다.
+
+<br>
+
+![j6](https://github.com/Cheolyong-Kim/TIL/blob/master/%EB%94%A5%EB%9F%AC%EB%8B%9D%EA%B8%B0%EB%B0%98%20%EB%B9%84%EC%A0%95%ED%98%95%20%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EC%84%9D/BERT%20image/j6.png?raw=true)
+
+코사인 유사도 함수를 사용해 임의의 질문이 입력으로 들어오면 해당 질문의 문장 임베딩 값과 챗봇 데이터의 모든 질문 샘플들에 대한 문장 임베딩 값들을 비교하여 유사도가 가장 높은 질문 샘플을 찾아 짝이 되는 답변 샘플을 리턴하는 함수를 만든다.
+
+<br>
+
+![j7](https://github.com/Cheolyong-Kim/TIL/blob/master/%EB%94%A5%EB%9F%AC%EB%8B%9D%EA%B8%B0%EB%B0%98%20%EB%B9%84%EC%A0%95%ED%98%95%20%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EC%84%9D/BERT%20image/j7.png?raw=true)
+
+챗봇을 테스트해본 결과이다.
+
+<br>
+
+---
+
 ### 참고
 
 <br>
 
 이 문서에서는 BERT에 관해서 간단하게 정리하고 자세한 내용은 살펴보지 않았다.
 
-자세한 설명과 BERT를 통한 예제 등을 [이 링크]()
+자세한 설명과 BERT를 통한 예제 등을 [이 링크](https://wikidocs.net/109251)
