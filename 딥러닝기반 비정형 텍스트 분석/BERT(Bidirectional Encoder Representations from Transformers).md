@@ -431,6 +431,78 @@ SBERT를 이용해 문장 임베딩을 얻을 수 있는 패키지인 sentence_t
 
 ---
 
+### BERT를 이용한 키워드 추출 : 키버트(KeyBERT)
+
+<br>
+
+BERT를 이용해 문장의 키워드를 추출해서 긴 문장을 짧게 요약하는 예제를 살펴본다.
+
+<br>
+
+![j8](https://github.com/Cheolyong-Kim/TIL/blob/master/%EB%94%A5%EB%9F%AC%EB%8B%9D%EA%B8%B0%EB%B0%98%20%EB%B9%84%EC%A0%95%ED%98%95%20%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EC%84%9D/BERT%20image/j8.png?raw=true)
+
+필요한 패키지를 불러온다.
+
+사용할 문장은 지도 학습에 대한 영어 문서를 사용한다.
+
+<br>
+
+![j9](https://github.com/Cheolyong-Kim/TIL/blob/master/%EB%94%A5%EB%9F%AC%EB%8B%9D%EA%B8%B0%EB%B0%98%20%EB%B9%84%EC%A0%95%ED%98%95%20%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EC%84%9D/BERT%20image/j9.png?raw=true)
+
+CountVectorizer를 사용하여 단어를 추출한다. n_gram_range의 인자를 사용해서 쉽게 n-gram을 추출할 수 있다.
+
+<br>
+
+![j10](https://github.com/Cheolyong-Kim/TIL/blob/master/%EB%94%A5%EB%9F%AC%EB%8B%9D%EA%B8%B0%EB%B0%98%20%EB%B9%84%EC%A0%95%ED%98%95%20%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EC%84%9D/BERT%20image/j10.png?raw=true)
+
+모델을 불러와서 문장과 trigram을 통해 얻어낸 단어들을 인코딩한다.
+
+<br>
+
+![j11](https://github.com/Cheolyong-Kim/TIL/blob/master/%EB%94%A5%EB%9F%AC%EB%8B%9D%EA%B8%B0%EB%B0%98%20%EB%B9%84%EC%A0%95%ED%98%95%20%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EC%84%9D/BERT%20image/j11.png?raw=true)
+
+문서와 가장 유사한 키워드를 위에서 5개 추출한다.
+
+각 키워드를 보면 의미가 비슷한 것을 볼 수 있다. 당연히 이 키워드들이 문서를 가장 잘 나타내고 있기 때문이다.
+
+하지만 키워드가 다양하지 못하면 문서를 잘 나타내지 못할 가능성이 있다.
+
+그렇기 때문에 키워드를 다양하게 출력하는 방법이 필요하다.
+
+그 방법으로 Max Sum Similarity, Maxiaml Marginal Relevance 알고리즘을 사용해본다.
+
+<br>
+
+##### Max Sum Similarity
+
+![j12](https://github.com/Cheolyong-Kim/TIL/blob/master/%EB%94%A5%EB%9F%AC%EB%8B%9D%EA%B8%B0%EB%B0%98%20%EB%B9%84%EC%A0%95%ED%98%95%20%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EC%84%9D/BERT%20image/j12.png?raw=true)
+
+Max Sum Similarity 알고리즘을 구현한 함수이다. top_n 매개변수는 코사인 유사도에 기반한 키워드들 중 상위 top_n개를 출력하도록 동작한다. nr_candidates 매개변수의 값은 높으면 높을 수록 더 다양한 키워드를 추출하게 된다.
+
+<br>
+
+![j13](https://github.com/Cheolyong-Kim/TIL/blob/master/%EB%94%A5%EB%9F%AC%EB%8B%9D%EA%B8%B0%EB%B0%98%20%EB%B9%84%EC%A0%95%ED%98%95%20%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EC%84%9D/BERT%20image/j13.png?raw=true)
+
+함수를 사용해서 출력해본 결과이다. nr_candidates가 높을수록 키워드가 다양해지는 것을 볼 수 있다.
+
+<br>
+
+##### Maximal Marginal Relevance
+
+![j14](https://github.com/Cheolyong-Kim/TIL/blob/master/%EB%94%A5%EB%9F%AC%EB%8B%9D%EA%B8%B0%EB%B0%98%20%EB%B9%84%EC%A0%95%ED%98%95%20%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EC%84%9D/BERT%20image/j14.png?raw=true)
+
+Maximal Marginal Relevance를 구현한 함수이다. top_n 매개변수는 Max Sum Similarity 함수에서의 역할과 동일하다. diversity 매개변수는 높을 수록 다양한 키워드를 추출해낸다.
+
+<br>
+
+![j15](https://github.com/Cheolyong-Kim/TIL/blob/master/%EB%94%A5%EB%9F%AC%EB%8B%9D%EA%B8%B0%EB%B0%98%20%EB%B9%84%EC%A0%95%ED%98%95%20%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%B6%84%EC%84%9D/BERT%20image/j15.png?raw=true)
+
+MMR 함수를 사용해 키워드를 추출한 결과이다. diversity값이 클수록 다양한 키워드가 추출되는 것을 볼 수 있다.
+
+<br>
+
+---
+
 ### 참고
 
 <br>
@@ -438,3 +510,4 @@ SBERT를 이용해 문장 임베딩을 얻을 수 있는 패키지인 sentence_t
 이 문서에서는 BERT에 관해서 간단하게 정리하고 자세한 내용은 살펴보지 않았다.
 
 자세한 설명과 BERT를 통한 예제 등을 [이 링크](https://wikidocs.net/109251)
+
