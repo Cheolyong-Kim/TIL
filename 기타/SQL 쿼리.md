@@ -244,3 +244,86 @@ Q2. 상품 가격 중 최대값 조회
 SELECT MAX(Price) FROM Products
 ```
 
+<br>
+
+###### GROUP BY를 사용해 열 기준 데이터 그룹핑
+
+Q1. 국가 별 고객수 조회 (고객수 기준 오름차순): 국가명, 고객수 표시
+
+```sql
+SELECT Country, COUNT(*) FROM Customers
+GROUP BY Country
+ORDER BY COUNT(*) ASC;
+```
+
+<br>
+
+Q2. 국가 별, 도시 별 고객수 조회 (고객수 기준 내림차순): 국가명, 도시명, 고객수 표시
+
+```sql
+SELECT Country, City, COUNT(*) FROM Customers
+GROUP BY Country, City
+ORDER BY COUNT(*) DESC;
+```
+
+<br>
+
+###### HAVING을 사용해 집계데이터를 기준으로 조건 설정
+
+Q1. 국가별 고객수를 조회하고 그 중 5명 초과인 국가만 조회 (고객수 내림 차순): 국가명, 고객수 표시
+
+```sql
+SELECT Country, COUNT(*) FROM Customers
+GROUP BY Country
+HAVING COUNT(*)>5
+ORDER BY COUNT(*) ASC;
+```
+
+<br>
+
+---
+
+### 기타
+
+###### 주석
+
+```sql
+-- select all
+SELECT * FROM Customers;
+```
+
+<br>
+
+###### Alias
+
+```sql
+SELECT Country, COUNT(*) AS Num_of_customers FROM Customers
+GROUP BY Country
+HAVING COUNT(*)>5
+ORDER BY COUNT(*) ASC;
+
+-- AS 생략 가능
+SELECT Country, COUNT(*) Num_of_customers FROM Customers
+GROUP BY Country
+HAVING COUNT(*)>5
+ORDER BY COUNT(*) ASC;
+```
+
+<br>
+
+---
+
+### 데이터 조인
+
+###### JOIN
+
+Q1. 상품을 조회하는데, 카테고리 이름과 함께 보이도록 조회
+
+```sql
+SELECT * FROM Products P
+JOIN Categories C
+ON P.CategoryID=C.CategoryID
+```
+
+
+
