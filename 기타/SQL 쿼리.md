@@ -322,8 +322,142 @@ Q1. 상품을 조회하는데, 카테고리 이름과 함께 보이도록 조회
 ```sql
 SELECT * FROM Products P
 JOIN Categories C
-ON P.CategoryID=C.CategoryID
+ON P.CategoryID=C.CategoryID;
 ```
 
+<br>
 
+---
 
+### 데이터 추가, 삭제, 갱신
+
+###### INSERT INTO 사용하여 데이터 추가
+
+Q1. 고객 정보 추가
+
+```sql
+INSERT INTO Customers (CustomerID, CustomerName, ContactName, Address, City, PostalCode, Country)
+VALUES (93, 'Sponge', 'bob', 'Sea', 'Bikini Bottom', '12345', 'USA');
+```
+
+<br>
+
+###### DELETE를 사용하여 데이터 삭제
+
+Q1. 독일에 살고 있는 고객정보 삭제
+
+```sql
+DELETE FROM Customers WHERE Country='Germany'
+```
+
+<br>
+
+###### UPDATE를 사용하여 조건에 맞는 데이터 수정
+
+Q1. 베를린에 살고 있는 고객의 우편번호를 12210으로 수정
+
+```sql
+UPDATE Customers
+SET PostalCode='12210'
+WHERE City='Berlin';
+```
+
+<br>
+
+---
+
+### 뷰
+
+```sql
+CREATE VIEW Brazil Customers AS
+SELECT CustomerName, ContactName
+FROM Customers
+WHERE Country='Brazil';
+```
+
+<br>
+
+---
+
+### 저장프로시져
+
+```sql
+CREATE PROCEDURE SelectAllCustomers
+AS
+SELECT * FROM Customers
+GO;
+
+EXEC SelectAllCustomers;
+```
+
+<br>
+
+---
+
+### 테이블 작성, 삭제, 변경
+
+###### Create DB
+
+데이터베이스(스키마)를 생성
+
+```sql
+CREATE DATABASE testDB;
+```
+
+<br>
+
+###### Drop DB
+
+데이터베이스를 삭제
+
+```sql
+DROP DATABASE testDB;
+```
+
+<br>
+
+###### Create Table
+
+데이터베이스 내 테이블 생성
+
+```sql
+CREATE TABLE Persons(
+	PersonID int,
+    LastName varchar(255),
+    FirstName varchar(255),
+    Address varchar(255),
+    City varchar(255)
+);
+```
+
+<br>
+
+###### Drop Table
+
+데이터베이스 내 테이블 삭제
+
+```sql
+DROP TABLE table_name;
+TRUNCATE TABLE table_name;
+```
+
+<br>
+
+###### Alter Table
+
+데이터베이스 내 테이블 수정
+
+```sql
+ALTER TABLE Customers
+ADD Email varchar(255);
+```
+
+<br>
+
+---
+
+### 기타
+
+[데이터베이스 제약 조건](https://liveloper-jay.tistory.com/22)
+
+[데이터베이스 관계](https://hanamon.kr/%EA%B4%80%EA%B3%84%ED%98%95-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EC%84%A4%EA%B3%84-%EA%B4%80%EA%B3%84-%EC%A2%85%EB%A5%98/)
