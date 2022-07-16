@@ -46,7 +46,7 @@
     - [머신러닝 딥러닝 10](https://github.com/Cheolyong-Kim/TIL/blob/master/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D%20%EB%94%A5%EB%9F%AC%EB%8B%9D%20%EA%B8%B0%EC%B4%88/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D%20%EB%94%A5%EB%9F%AC%EB%8B%9D%20%EA%B8%B0%EC%B4%88%2010.md)
     - [평가 지표 간단한 정리](https://github.com/Cheolyong-Kim/TIL/blob/master/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D%20%EB%94%A5%EB%9F%AC%EB%8B%9D%20%EA%B8%B0%EC%B4%88/%ED%8F%89%EA%B0%80%20%EC%A7%80%ED%91%9C%20%EA%B0%84%EB%8B%A8%ED%95%9C%20%EC%A0%95%EB%A6%AC.md)
     - [XGBoost](https://github.com/Cheolyong-Kim/TIL/blob/master/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D%20%EB%94%A5%EB%9F%AC%EB%8B%9D%20%EA%B8%B0%EC%B4%88/XGBoost.md)
-    
+    - [준지도학습](https://github.com/Cheolyong-Kim/TIL/blob/master/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D%20%EB%94%A5%EB%9F%AC%EB%8B%9D%20%EA%B8%B0%EC%B4%88/%EC%A4%80%EC%A7%80%EB%8F%84%20%ED%95%99%EC%8A%B5(SSL%2C%20Semi-Supervised%20Learning).md)
     <br/>
     
 - 통계기반 비정형 텍스트 분석
