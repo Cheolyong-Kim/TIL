@@ -372,3 +372,6 @@ Accuracy: 86.200
 위 예제를 통해 준지도학습을 통해서 모델을 학습시켰을 때 어느정도의 성능 향상을 기대할 수 있다는 것을 알 수 있었다.
 레이블 데이터가 없을 때, 시간적 여유가 없을 때 고민해볼 수 있는 학습 방법인 것 같다.
 
+---
+
+참고 링크 : [https://machinelearningmastery.com/semi-supervised-learning-with-label-propagation/](https://machinelearningmastery.com/semi-supervised-learning-with-label-propagation/)
