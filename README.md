@@ -96,4 +96,5 @@
     - [회귀 분석(statsmodels)](https://github.com/Cheolyong-Kim/TIL/blob/master/%EA%B8%B0%ED%83%80/%ED%9A%8C%EA%B7%80%20%EB%B6%84%EC%84%9D(statsmodels).md)
     - [추천 시스템 코드 분석](https://github.com/Cheolyong-Kim/TIL/blob/master/%EA%B8%B0%ED%83%80/%EC%B6%94%EC%B2%9C%20%EC%8B%9C%EC%8A%A4%ED%85%9C%20%EC%BD%94%EB%93%9C%20%EB%B6%84%EC%84%9D.md)
     - [SQL 쿼리](https://github.com/Cheolyong-Kim/TIL/blob/master/%EA%B8%B0%ED%83%80/SQL%20%EC%BF%BC%EB%A6%AC.md)
+    - [EDA(Ease Data Augmentation)](https://github.com/Cheolyong-Kim/TIL/blob/master/%EA%B8%B0%ED%83%80/EDA.md)
 
