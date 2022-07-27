@@ -72,17 +72,9 @@ EDA의 기법들에는 위에서 설명했듯이 네가지가 있다.
 4. 랜덤 삭제(RD) : 확률 p를 통해 문장 내에 있는 각 단어들을 랜덤하게 삭제한다.<br>
 <br>
 긴 문장은 짧은 문장보다 단어 수가 많기 때문에 원래의 라벨을 유지하면서 노이즈에 상대적으로 영향을 덜 받는다.<br>
-대신에 공식 
-
-``n=al``
-
-과 함께 문장 길이 ``l`` 을 기준으로 SR, RI, RS에 대해 바뀐 단어의 수 n을 변화시킨다.
+대신에 공식 n=al 과 함께 문장 길이 l 을 기준으로 SR, RI, RS에 대해 바뀐 단어의 수 n을 변화시킨다.
 <br>
-여기서 
-
-``a``
-
-는 단어의 백분율이 변경되었음을 나타내는 매개변수이다.
+여기서 a는 단어의 백분율이 변경되었음을 나타내는 매개변수이다.
 (RD에서의 a는 p로 표기함)
 <br>
 <br>
@@ -112,7 +104,7 @@ EDA의 기법들에는 위에서 설명했듯이 네가지가 있다.
 <br>
 <br>
 
-```
+```python
 import random
 import pickle
 import re
@@ -296,7 +288,7 @@ def EDA(sentence, alpha_sr=0.1, alpha_ri=0.1, alpha_rs=0.1, p_rd=0.1, num_aug=9)
 <br>
 <br>
 
-```
+```python
 wordnet = {}
 with open("wordnet.pickle", "rb") as f:
 	wordnet = pickle.load(f)
@@ -305,7 +297,7 @@ wordnet은 KAIST에서 만든 Korean WordNet(KWN)을 사용
 <br>
 <br>
 
-```
+```python
 def get_only_hangul(line):
 	parseText= re.compile('/ ^[ㄱ-ㅎㅏ-ㅣ가-힣]*$/').sub('',line)
 
@@ -314,7 +306,8 @@ def get_only_hangul(line):
 한글만 남기는 함수
 <br>
 <br>
-```
+
+```python
 def synonym_replacement(words, n):
 	new_words = words.copy()
 	random_word_list = list(set([word for word in words]))
@@ -354,7 +347,8 @@ def get_synonyms(word):
 SR에 해당하는 함수, 입력된 단어와 유사한 단어를 WordNet에서 찾아 교체
 <br>
 <br>
-```
+
+```python
 def random_deletion(words, p):
 	if len(words) == 1:
 		return words
@@ -374,7 +368,8 @@ def random_deletion(words, p):
 RD에 해당하는 함수, 랜덤으로 단어를 삭제
 <br>
 <br>
-```
+
+```python
 def random_swap(words, n):
 	new_words = words.copy()
 	for _ in range(n):
@@ -400,7 +395,7 @@ RS에 해당하는 함수, 단어의 위치를 교체
 <br>
 <br>
 
-```
+```python
 def random_insertion(words, n):
 	new_words = words.copy()
 	for _ in range(n):
@@ -430,7 +425,8 @@ def add_word(new_words):
 RI에 해당하는 함수, 임의의 단어를 삽입
 <br>
 <br>
-```
+
+```python
 def EDA(sentence, alpha_sr=0.1, alpha_ri=0.1, alpha_rs=0.1, p_rd=0.1, num_aug=9):
 	sentence = get_only_hangul(sentence)
 	words = sentence.split(' ')
